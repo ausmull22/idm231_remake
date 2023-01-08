@@ -1,0 +1,434 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/new_animations.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+    <style>
+
+        .logo_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo_container img {
+        }
+        
+        .switch {
+            margin-top: 2rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            position: relative;
+            width: 80px;
+            height: 40px;
+            -webkit-appearance: none;
+            background: gray;
+            outline: none;
+            border-radius: 20px;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            transition: 0.5s;
+        }
+
+        
+        input:checked[type="checkbox"] {
+            background: gray;
+        }
+
+                
+        input[type="checkbox"]:before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+            background-color: whitesmoke;
+            transform: scale(1.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: 0.5s;
+
+        }
+
+        input:checked[type="checkbox"]:before {
+            left: 40px;
+            background-color: red;
+            outline: 1rem;
+
+        }
+
+        button {
+            font-family: Quicksand;
+            background-color: white;
+            border: none;
+            color: black ;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 1rem 0px;
+            cursor: pointer;
+        }
+
+        .button_array {
+            width: 100%;
+        }
+
+        #js-discover-button {
+            width: 60%;
+        }
+
+        #js-help-button {
+            width: 38%;
+        }
+
+
+        .js-zodiac-sign-name {
+            transform: translateY(-2rem);
+            font-size: 1rem;
+            margin-top: 0;
+            transition: 0.5s;
+        }
+
+        .js-zodiac-sign-name.active {
+            transform: translateY(-0.75rem);
+            font-size: .6rem;
+            opacity: .75;
+        }
+
+        .js-cereal-name {
+            position: relative;
+            margin-top: 0.25rem;
+            opacity: 0;
+            font-size: .65rem;
+            transition: 0.5s;
+        }
+
+        .js-cereal-name.active {
+            display: block;
+            opacity: 1;
+
+        }
+
+        .icon_container {
+            width: 78px;
+            height: 78px;
+            margin: .4rem 0;
+            border: white solid 2px;
+            border-radius: 100%;
+        }
+ 
+        .js-zodiac-icon {
+            position: absolute;
+            opacity: 1;
+            transition: 0.5s;
+
+        }
+
+        .js-zodiac-icon.active {
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s;
+
+        }
+        
+        .js-cereal-icon {
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s;
+
+        }
+
+        .js-cereal-icon.active {
+            position: absolute;
+            opacity: 1;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- All Content that will be loaded-->
+    <div class = "content">        
+        <!-- Splashscreen -->
+
+        <div class = splashscreen>
+            
+            <!-- Container Displaying the Cereal On-Screen -->
+            <div class = splash_screen_lottie> 
+            </div>
+
+            <!--Input Screen-->
+            <div class = input_screen>
+                <!-- Heading of Title -->
+                <div class="logo_container">
+                    <img src="/images/Logo.svg">
+                    <!-- Heading asking for User to Enter Birthday -->
+                    <!-- Container with Form -->
+                </div>
+
+                
+                <div id="js-warning-animation" class="input_form">
+                    <!-- Form Asking for Birthday-->
+                    <form> 
+                        <div class="inputBox">
+
+                            <input type="text" onfocus="(this.type='date')" required="required">
+                            <span>Insert Birth Date</span>
+                    
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="button_array">
+                    <!-- Enter Button to Determine Zodiac -->
+                    <button id="js-discover-button"><i class="fa fa-sun-o"></i> Discover Cereal</button>
+
+                    <!-- Enter Button for Help -->
+                    <button id="js-help-button"><i class="fa fa-question"></i> Help</button>
+                </div>
+
+            </div>
+        
+        </div>
+
+        <!-- Footer-->
+        <footer>
+                        
+
+            <!-- Navigation to view Zodiacs without having to input birthdate-->
+            <div class="navigation">
+                <div id="zodiac_toggle">
+                    <div class="zodiac_button_container">
+                    <!-- Images of Horoscopes Acting as Buttons -->
+                        <div class="zodiac_button" id="aries">
+                            <div class="icon_container">
+                                <div class="js-zodiac-icon">                            
+                                    <img src="images/symbols/zodiac/aries.svg" class="js-cereal" alt="Aries" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+
+                                <div class="js-cereal-icon">                            
+                                    <img src="images/symbols/brand/aries_cereal.svg" class="js-cereal" alt="Lucky Charms" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+                            </div>
+                            <div class="meta-data">
+                                <p class="js-cereal-name">Lucky Charms</p>
+                                <p class="js-zodiac-sign-name">Aries</p>
+                            </div>
+                        </div>
+                        
+                        <div class="zodiac_button" id="taurus">
+                            <div class="icon_container">
+                                <div class="js-zodiac-icon">                            
+                                    <img src="images/symbols/zodiac/taurus.svg" class="js-cereal" alt="Taurus" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+
+                                <div class="js-cereal-icon">                            
+                                    <img src="images/symbols/brand/taurus_cereal.svg" class="js-cereal" alt="Trix" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+                            </div>                            
+                            
+                            <div class="meta-data">
+                                <p class="js-cereal-name">Trix</p>
+                                <p class="js-zodiac-sign-name">Taurus</p>
+                            </div>
+                        </div>
+
+                        <div class="zodiac_button" id="gemini">
+                            <div class="icon_container">
+                                <div class="js-zodiac-icon">                            
+                                    <img src="images/symbols/zodiac/gemini.svg" class="js-cereal" alt="Gemini" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+
+                                <div class="js-cereal-icon">                            
+                                    <img src="images/symbols/brand/gemini_cereal.svg" class="js-cereal" alt="Raisin Bran" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+                            </div>     
+                            <div class="meta-data">
+                                <p class="js-cereal-name">Raisin Bran</p>
+                                <p class="js-zodiac-sign-name">Gemini</p>
+                            </div>
+                        </div>
+
+                        <div class="zodiac_button" id="cancer">
+                            <div class="icon_container">
+                                <div class="js-zodiac-icon">                            
+                                    <img src="images/symbols/zodiac/cancer.svg" class="js-cereal" alt="Cancer" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+
+                                <div class="js-cereal-icon">                            
+                                    <img src="images/symbols/brand/cancer_cereal.svg" class="js-cereal" alt="Frosted Flakes" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+                            </div>                                 
+                            <div class="meta-data">
+                                <p class="js-cereal-name">Frosted Flakes</p>
+                                <p class="js-zodiac-sign-name">Cancer</p>     
+                            </div>     
+                        </div>
+
+                        <div class="zodiac_button" id="leo">
+                            <div class="icon_container">
+                                <div class="js-zodiac-icon">                            
+                                    <img src="images/symbols/zodiac/leo.svg" class="js-cereal" alt="Leo" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+
+                                <div class="js-cereal-icon">                            
+                                    <img src="images/symbols/brand/leo_cereal.svg" class="js-cereal" alt="Life Cereal" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+                            </div>     
+                            <div class="meta-data">
+                                <p class="js-cereal-name">Life</p>
+                                <p class="js-zodiac-sign-name">Leo</p>
+                            </div>
+                        </div>
+
+                        <div class="zodiac_button" id="virgo">
+                            <div class="icon_container">
+                                <div class="js-zodiac-icon">                            
+                                    <img src="images/symbols/zodiac/virgo.svg" class="js-cereal" alt="Virgo" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+
+                                <div class="js-cereal-icon">                            
+                                    <img src="images/symbols/brand/virgo_cereal.svg" class="js-cereal" alt="Alpha Bits" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+                            </div>     
+                            <div class="meta-data">
+                                <p class="js-cereal-name">Alpha Bits</p>
+                                <p class="js-zodiac-sign-name">Virgo</p>
+                            </div>
+
+                        </div>
+
+                        <div class="zodiac_button" id="libra">
+                            <div class="icon_container">
+                                <div class="js-zodiac-icon">                            
+                                    <img src="images/symbols/zodiac/libra.svg" class="js-cereal" alt="Libra" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+
+                                <div class="js-cereal-icon">                            
+                                    <img src="images/symbols/brand/libra_cereal.svg" class="js-cereal" alt="Apple Jacks" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+                            </div>  
+                            <div class="meta-data">
+                                <p class="js-cereal-name">Apple Jacks</p>
+                                <p class="js-zodiac-sign-name">Libra</p>
+                            </div>
+                        </div>
+
+                        <div class="zodiac_button" id="scorpio">
+                            <div class="icon_container">
+                                <div class="js-zodiac-icon">                            
+                                    <img src="images/symbols/zodiac/scorpio.svg" class="js-cereal" alt="Scorpio" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+
+                                <div class="js-cereal-icon">                            
+                                    <img src="images/symbols/brand/scorpio_cereal.svg" class="js-cereal" alt="Corn Flakes" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+                            </div>  
+                            <div class="meta-data">
+                                <p class="js-cereal-name">Corn Flakes</p>
+                                <p class="js-zodiac-sign-name">Scorpio</p>
+                            </div>
+                        </div>
+
+                        <div class="zodiac_button" id="sagittarius">
+                            <div class="icon_container">
+                                <div class="js-zodiac-icon">                            
+                                    <img src="images/symbols/zodiac/saggitarus.svg" class="js-cereal" alt="Saggitarus" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+
+                                <div class="js-cereal-icon">                            
+                                    <img src="images/symbols/brand/saggitarus_cereal.svg" class="js-cereal" alt="Honey Nut Cheerios" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+                            </div>  
+                            <div class="meta-data">
+                                <p class="js-cereal-name">Cheerios</p>
+                                <p class="js-zodiac-sign-name">Saggitarus</p>
+                            </div>
+                        </div>
+
+                        <div class="zodiac_button" id="capricorn">
+                            <div class="icon_container">
+                                <div class="js-zodiac-icon">                            
+                                    <img src="images/symbols/zodiac/capricorn.svg" class="js-cereal" alt="Capricorn" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+
+                                <div class="js-cereal-icon">                            
+                                    <img src="images/symbols/brand/capricorn_cereal.svg" class="js-cereal" alt="Golden Grahams" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+                            </div>  
+                            
+                            <div class="meta-data">
+                                <p class="js-cereal-name">Golden Grahams</p>
+                                <p class="js-zodiac-sign-name">Capricorn</p>
+                            </div>
+                        </div>
+
+                        <div class="zodiac_button" id="aquarius">
+                            <div class="icon_container">
+                                <div class="js-zodiac-icon">                            
+                                    <img src="images/symbols/zodiac/aquarius.svg" class="js-cereal" alt="Aquarius" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+
+                                <div class="js-cereal-icon">                            
+                                    <img src="images/symbols/brand/aquarius_cereal.svg" class="js-cereal" alt="Wheaties" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+                            </div>
+
+                            <div class="meta-data">
+                                <p class="js-cereal-name">Wheaties</p>
+                                <p class="js-zodiac-sign-name">Aquarius</p>
+                            </div>
+                        </div>
+
+                        <div class="zodiac_button" id="pisces">
+                            <div class="icon_container">
+                                <div class="js-zodiac-icon">                            
+                                    <img src="images/symbols/zodiac/pisces.svg" class="js-cereal" alt="Pisces" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+
+                                <div class="js-cereal-icon">                            
+                                    <img src="images/symbols/brand/pisces_cereal.svg" class="js-cereal" alt="Reese's Puffs" onclick="zodiac_taurus();zodiac_transition();">
+                                </div>
+                            </div>  
+                            <div class="meta-data">
+                                <p class="js-cereal-name">Reeses Puff</p>
+                                <p class="js-zodiac-sign-name">Pisces</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+       
+            </div>
+
+                  <!-- Toggle Switch (Switch Buttons from Zodiacs to Cereal Brands)-->
+                <div class = switch>
+                    <input id="js-toggle-cereal" type="checkbox" onclick="result()" name="">
+                    <p>Display Cereal </p>
+                </div>
+        </footer>
+    </div>
+
+    <!-- Loading Screen-->
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+</body>
+</html>
