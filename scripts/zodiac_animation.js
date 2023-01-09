@@ -1,5 +1,5 @@
 var animation = bodymovin.loadAnimation({
-    container: document.getElementById('anim'),
+    container: document.getElementById('anim_mobile'),
     renderer: 'svg',
     loop: true,
     autoplay: true,

@@ -29,3 +29,12 @@ function result() {
 
 }
 
+function toggle_instructions() {
+
+    let toggleAble_help_screen = document.querySelectorAll('.js-help-screen');
+    
+    for(let x of toggleAble_help_screen) {
+        x.classList.toggle('active');
+    }
+
+}

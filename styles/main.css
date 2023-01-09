@@ -351,3 +351,63 @@ button {
     opacity: 1;
 
 }
+
+ /* Selected Cereal */
+ 
+.selected-zodiac-container {
+    background-color: red;    
+}
+
+
+.image-container {
+}
+
+
+.image-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.cereal-description {
+    padding: 1rem;
+}
+
+.center_button {
+    text-align: center;
+}
+
+#js-return-button {
+    padding: 1rem 3rem;
+}
+
+
+#js-proceed-button {
+    padding: 1rem 3rem;
+}
+
+#anim_mobile {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.instructions {
+    padding: 0 2rem;
+}
+
+.js-help-screen {
+    z-index: 3;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+    transition: 1s;
+}
+
+.js-help-screen.active {
+    opacity: 0;
+    visibility: none;
+    filter: blur(1rem);
+    pointer-events: none;
+}
