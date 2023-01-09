@@ -38,3 +38,4 @@ function toggle_instructions() {
     }
 
 }
+
