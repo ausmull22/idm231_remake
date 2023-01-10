@@ -44,18 +44,95 @@ h2 {
 
     text-decoration: none; 
     color: white; 
+
+    
+    text-align: center;
+
+    margin: 0 auto;
 }
 
 .zodiac_button img {
+    
     display: block;
     width: 78px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.zodiac_button p {
-    text-align: center;
+
+
+.js-zodiac-sign-name {
+    white-space: nowrap;
+    width: 100%;
+    transform: translateY(-2rem);
+    font-size: 1rem;
+    transition: 0.5s;
 }
+
+.js-zodiac-sign-name.active {
+    transform: translateY(-0.75rem);
+    font-size: .6rem;
+    opacity: .75;
+}
+
+.js-cereal-name {
+    white-space: nowrap;
+    width: 100%;
+    
+    position: relative;
+    margin-top: 0.25rem;
+    opacity: 0;
+    font-size: .65rem;
+    transition: 0.5s;
+}
+
+.js-cereal-name.active {
+    display: block;
+    opacity: 1;
+
+}
+
+.icon_container {
+    width: 78px;
+    height: 78px;
+    margin: .4rem 0;
+    border: white solid 2px;
+    border-radius: 100%;
+}
+
+.js-zodiac-icon {
+    position: absolute;
+    opacity: 1;
+    transition: 0.5s;
+
+}
+
+.js-zodiac-icon.active {
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+
+.js-cereal-icon {
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+
+.js-cereal-icon.active {
+    position: absolute;
+    opacity: 1;
+
+}
+
+.meta-data {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 
  /* Input Form */
 
@@ -112,6 +189,14 @@ h2 {
 }
 
 
+
+#js-discover-button {
+    width: 60%;
+}
+
+#js-help-button {
+    width: 38%;
+}
 
 
 /* Display Cereal Switch */
@@ -281,76 +366,6 @@ button {
     width: 100%;
 }
 
-#js-discover-button {
-    width: 60%;
-}
-
-#js-help-button {
-    width: 38%;
-}
-
-
-.js-zodiac-sign-name {
-    transform: translateY(-2rem);
-    font-size: 1rem;
-    margin-top: 0;
-    transition: 0.5s;
-}
-
-.js-zodiac-sign-name.active {
-    transform: translateY(-0.75rem);
-    font-size: .6rem;
-    opacity: .75;
-}
-
-.js-cereal-name {
-    position: relative;
-    margin-top: 0.25rem;
-    opacity: 0;
-    font-size: .65rem;
-    transition: 0.5s;
-}
-
-.js-cereal-name.active {
-    display: block;
-    opacity: 1;
-
-}
-
-.icon_container {
-    width: 78px;
-    height: 78px;
-    margin: .4rem 0;
-    border: white solid 2px;
-    border-radius: 100%;
-}
-
-.js-zodiac-icon {
-    position: absolute;
-    opacity: 1;
-    transition: 0.5s;
-
-}
-
-.js-zodiac-icon.active {
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-
-}
-
-.js-cereal-icon {
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-
-}
-
-.js-cereal-icon.active {
-    position: absolute;
-    opacity: 1;
-
-}
 
  /* Selected Cereal */
  

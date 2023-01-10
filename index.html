@@ -23,13 +23,40 @@
 
                 
         /* Medium devices (landscape tablets, 768px and up) */
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 768px) { 
 
         .zodiac_button_container {
             display: flex;
+            width: 100%;
+        }
+
+        .zodiac_button {
+            z-index: 1;
+            margin-left: 0.1rem;
+            width: 80px;
+            height: 100%;
+
+        }
+
+        .icon_container {
+            width: 42px;
+            height: 42px;
+            margin: .4rem 0;
+            border: white solid 2px;
+            border-radius: 100%;
+        }
+
+        .zodiac_button img {
+            
+            display: block;
+            width: 42px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .navigation {
+            border-top: 1px solid white;
+            width: 100%;
             display: flex;
             flex-direction: row-reverse;
         }
@@ -37,25 +64,75 @@
         .splashscreen {
             display: flex;
             flex-direction: row-reverse;
+            height: fit-content;
 
         }
 
         .hint {
+            z-index: 100;
             opacity: 0;
             position: absolute;
             top: -50px;
-            background-color: rgba(255, 255, 255, 0.187);
+            background-color: rgb(109, 109, 109);
             border-radius: 10rem;
             color: rgba(255, 255, 255, 0.616);
             padding: 1rem;
             transition: 0.5s;
         }
 
+
+        .switch {
+            margin: 0;
+        }
         .switch:hover > .hint {
             top: -60px;
             opacity: 1;
         }
 
+        .button-info-container {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .meta-data {
+            position: absolute;
+            transform: translateX(-20%);
+            text-align: center;
+            opacity: 0;
+            padding: 0.25rem 0;
+            height: 20px;
+            width: 130px;
+            background-color: rgb(109, 109, 109);
+            color: rgba(255, 255, 255, 0.616);
+            border-radius: 20rem;
+            transition: 0.5s;
+        }
+
+        a:hover .meta-data {
+            opacity: 1;
+            transform: translateX(-20%) translateY(-90px);
+            background-color: rgb(109, 109, 109);
+
+        }
+
+        .js-zodiac-sign-name {
+            text-align: center;
+            font-size: 1rem;
+            transform: translateY(-2.25rem);
+
+        }
+
+        .js-zodiac-sign-name.active {
+            transform: translateY(-0.75rem);
+            font-size: 1rem;
+            opacity: .75;
+        }
+
+        .js-cereal-name {
+            font-size: 1rem;
+            margin: 0;
+        }
+    
         } 
 
 
@@ -150,7 +227,7 @@
                     <div class="zodiac_button_container">
                     <!-- Images of Horoscopes Acting as Buttons -->
                         <a class="zodiac_button" href="zodiacs/aries.html">
-                            <div id="aries">
+                            <div class="button-info-container" id="aries">
                                 <div class="icon_container">
                                     <div class="js-zodiac-icon">                            
                                         <img src="images/symbols/zodiac/aries.svg" class="js-cereal" alt="Aries" onclick="zodiac_taurus();zodiac_transition();">
@@ -161,14 +238,14 @@
                                     </div>
                                 </div>
                                 <div class="meta-data">
-                                    <p class="js-cereal-name">Lucky Charms</p>
-                                    <p class="js-zodiac-sign-name">Aries</p>
+                                        <p class="js-cereal-name">Lucky Charms</p>
+                                        <p class="js-zodiac-sign-name">Aries</p>
                                 </div>
                             </div>
                         </a>
                         
                         <a class="zodiac_button" href="">
-                            <div id="taurus">
+                            <div class="button-info-container" id="taurus">
                                 <div class="icon_container">
                                     <div class="js-zodiac-icon">                            
                                         <img src="images/symbols/zodiac/taurus.svg" class="js-cereal" alt="Taurus" onclick="zodiac_taurus();zodiac_transition();">
@@ -187,7 +264,7 @@
                         </a>
 
                         <a class="zodiac_button" href="">
-                            <div  id="gemini">
+                            <div class="button-info-container" id="gemini">
                                 <div class="icon_container">
                                     <div class="js-zodiac-icon">                            
                                         <img src="images/symbols/zodiac/gemini.svg" class="js-cereal" alt="Gemini" onclick="zodiac_taurus();zodiac_transition();">
@@ -205,7 +282,7 @@
                         </a>
 
                         <a class="zodiac_button" href="">
-                            <div id="cancer">
+                            <div class="button-info-container" id="cancer">
                                 <div class="icon_container">
                                     <div class="js-zodiac-icon">                            
                                         <img src="images/symbols/zodiac/cancer.svg" class="js-cereal" alt="Cancer" onclick="zodiac_taurus();zodiac_transition();">
@@ -224,7 +301,7 @@
 
                         <a class="zodiac_button" href="">
 
-                            <div class="zodiac_button" id="leo">
+                            <div class="button-info-container" id="leo">
                                 <div class="icon_container">
                                     <div class="js-zodiac-icon">                            
                                         <img src="images/symbols/zodiac/leo.svg" class="js-cereal" alt="Leo" onclick="zodiac_taurus();zodiac_transition();">
@@ -242,7 +319,7 @@
                         </a>
 
                         <a class="zodiac_button" href="">
-                            <div class="zodiac_button" id="virgo">
+                            <div class="button-info-container" id="virgo">
                                 <div class="icon_container">
                                     <div class="js-zodiac-icon">                            
                                         <img src="images/symbols/zodiac/virgo.svg" class="js-cereal" alt="Virgo" onclick="zodiac_taurus();zodiac_transition();">
@@ -261,7 +338,7 @@
                         </a>
 
                         <a class="zodiac_button" href="">
-                            <div id="libra">
+                            <div class="button-info-container" id="libra">
                                 <div class="icon_container">
                                     <div class="js-zodiac-icon">                            
                                         <img src="images/symbols/zodiac/libra.svg" class="js-cereal" alt="Libra" onclick="zodiac_taurus();zodiac_transition();">
@@ -279,7 +356,7 @@
                         </a>
 
                         <a class="zodiac_button" href="">
-                            <div class="zodiac_button" id="scorpio">
+                            <div class="button-info-container" id="scorpio">
                                 <div class="icon_container">
                                     <div class="js-zodiac-icon">                            
                                         <img src="images/symbols/zodiac/scorpio.svg" class="js-cereal" alt="Scorpio" onclick="zodiac_taurus();zodiac_transition();">
@@ -297,7 +374,7 @@
                         </a>
 
                         <a class="zodiac_button" href="">
-                            <div id="sagittarius">
+                            <div class="button-info-container" id="sagittarius">
                                 <div class="icon_container">
                                     <div class="js-zodiac-icon">                            
                                         <img src="images/symbols/zodiac/saggitarus.svg" class="js-cereal" alt="Saggitarus" onclick="zodiac_taurus();zodiac_transition();">
@@ -315,7 +392,7 @@
                         </a>
 
                         <a class="zodiac_button" href="">
-                            <div id="capricorn">
+                            <div class="button-info-container" id="capricorn">
                                 <div class="icon_container">
                                     <div class="js-zodiac-icon">                            
                                         <img src="images/symbols/zodiac/capricorn.svg" class="js-cereal" alt="Capricorn" onclick="zodiac_taurus();zodiac_transition();">
@@ -334,7 +411,7 @@
                         </a>
 
                         <a class="zodiac_button" href="">
-                            <div id="aquarius">
+                            <div class="button-info-container" id="aquarius">
                                 <div class="icon_container">
                                     <div class="js-zodiac-icon">                            
                                         <img src="images/symbols/zodiac/aquarius.svg" class="js-cereal" alt="Aquarius" onclick="zodiac_taurus();zodiac_transition();">
@@ -353,7 +430,7 @@
                         </a>
 
                         <a class="zodiac_button" href="">
-                            <div id="pisces">
+                            <div class="button-info-container" id="pisces">
                                 <div class="icon_container">
                                     <div class="js-zodiac-icon">                            
                                         <img src="images/symbols/zodiac/pisces.svg" class="js-cereal" alt="Pisces" onclick="zodiac_taurus();zodiac_transition();">
