@@ -7,12 +7,20 @@
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/barba.css">
     <script src="/scripts/new_animations.js"></script> 
-
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script> 
+        $(function(){
+          $("#footer").load("/footer.html"); 
+        });
+    </script> 
 
     <title>Document</title>
 </head>
 <style>
-
+    body {
+        background-image: url(/images/gradient_background.jpg);
+        background-size: cover;
+    }
 
     #js-preloader {
         background-color: red;
@@ -43,21 +51,47 @@
             display: flex;
         }
 
-        .selected-zodiac-info {
-            background-color: navy;
-            width: 70%;
-            margin: 0 0;
+        .test-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .info-responsive-container {
+        .test-container iframe {
+            width: 500px;
+            height: 500px;
+            
+        }
+
+        .selected-zodiac-info {
+            width: 70%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin: 0 0;
+            
+        }
+
+        .info-responsive-container { /* COME BACK */
             width: 400px;
             margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+
+     
         }
+
+        
+        .selected_zodiac_lottie_container {
+            width: 100%;
+            height: 128px;
+            
+        }
+
+        #selected_zodiac_aries {
+            height: 100%;
+        } 
+
+
+
     
     } 
 
@@ -78,6 +112,20 @@
         </div>
         <div class="selected-zodiac-info">
             <div class="info-responsive-container">
+                <div class="selected_zodiac_lottie_container"> 
+                    <div id="selected_zodiac_aries"></div>
+                    <script src="/scripts/lottie.js"></script>
+                    <script>
+                        var animation_aries = bodymovin.loadAnimation({
+                            container: document.getElementById('selected_zodiac_aries'),
+                            renderer: 'svg',
+                            loop: true,
+                            autoplay: true,
+                            path: '/lottie/virgo.json'
+                        })
+                    </script>
+                        
+                </div>
                 <h1>AlphaBits</h1>
                 <h2>Leo</h2>
                 <p class="cereal-description">
@@ -96,6 +144,11 @@
         </div>
  
     </div>
+
+  
+    <div id="footer"></div>
+
+
 
     <script>
 

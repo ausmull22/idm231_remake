@@ -59,8 +59,6 @@ h2 {
     margin-right: auto;
 }
 
-
-
 .js-zodiac-sign-name {
     white-space: nowrap;
     width: 100%;
@@ -93,12 +91,31 @@ h2 {
 }
 
 .icon_container {
+    z-index: 5;
     width: 78px;
     height: 78px;
     margin: .4rem 0;
     border: white solid 2px;
     border-radius: 100%;
+    transition: 0.5s;
 }
+
+.icon_container:hover  {
+    background-color: white;
+    box-shadow: 0 0 50px 10px #cecece;
+    z-index: 6;
+}
+
+.icon_container:hover > .js-zodiac-icon img {
+    z-index: 6;
+    filter: invert(1);
+}
+
+.icon_container:hover > .js-cereal-icon img {
+    z-index: 6;
+    filter: invert(1);
+}
+
 
 .js-zodiac-icon {
     position: absolute;
@@ -322,7 +339,7 @@ input[type="checkbox"] {
 
 
 input:checked[type="checkbox"] {
-    background: gray;
+    background: rgb(186, 234, 226);
 }
 
         
@@ -343,7 +360,7 @@ input[type="checkbox"]:before {
 
 input:checked[type="checkbox"]:before {
     left: 40px;
-    background-color: red;
+    background-color: white;
     outline: 1rem;
 
 }
@@ -360,6 +377,12 @@ button {
     font-size: 16px;
     margin: 1rem 0px;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px 05px #a4a4a4;
 }
 
 .button_array {
@@ -369,14 +392,6 @@ button {
 
  /* Selected Cereal */
  
-.selected-zodiac-container {
-    background-color: red;    
-}
-
-
-.image-container {
-}
-
 
 .image-container img {
     display: block;
@@ -402,6 +417,12 @@ button {
 }
 
 #anim_mobile {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#input_field_animation {
+    display: none;
     max-width: 400px;
     margin: 0 auto;
 }
@@ -448,3 +469,199 @@ button {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+
+
+
+/* //.......................................................................................................................
+//.RRRRRRRRR....EEEEEEEEEE....SSSSSS....PPPPPPPPP......OOOOOO.....NNNN....NNN....SSSSSS....III.IVV......VVV.EEEEEEEEEE...
+//.RRRRRRRRRRR..EEEEEEEEEE..SSSSSSSSS...PPPPPPPPPP...OOOOOOOOOO...NNNN....NNN..SSSSSSSSS...III.IVVV....VVVV.EEEEEEEEEE...
+//.RRRRRRRRRRR..EEEEEEEEEE..SSSSSSSSSS..PPPPPPPPPP..OOOOOOOOOOOO..NNNNN...NNN..SSSSSSSSSS..III.IVVV....VVVV.EEEEEEEEEE...
+//.RRR.....RRR..EEE.........SSS...SSSS..PPP....PPPP.OOOO....OOOO..NNNNN...NNN..SSS...SSSS..III..VVV....VVV..EEE..........
+//.RRR.....RRR..EEE.........SSSS........PPP....PPPP.OOO......OOO..NNNNNN..NNN..SSSS........III..VVVV..VVVV..EEE..........
+//.RRRRRRRRRRR..EEEEEEEEEE..SSSSSSS.....PPPPPPPPPP.POOO......OOOO.NNNNNNN.NNN..SSSSSSS.....III..VVVV..VVV...EEEEEEEEEE...
+//.RRRRRRRRRR...EEEEEEEEEE...SSSSSSSS...PPPPPPPPPP.POOO......OOOO.NNN.NNN.NNN...SSSSSSSS...III...VVV..VVV...EEEEEEEEEE...
+//.RRRRRRRR.....EEEEEEEEEE.....SSSSSSS..PPPPPPPPP..POOO......OOOO.NNN.NNNNNNN.....SSSSSSS..III...VVVVVVVV...EEEEEEEEEE...
+//.RRR..RRRR....EEE................SSSS.PPP.........OOO......OOO..NNN..NNNNNN.........SSSS.III...VVVVVVV....EEE..........
+//.RRR...RRRR...EEE........ESSS....SSSS.PPP.........OOOO....OOOO..NNN..NNNNNN.NSSS....SSSS.III....VVVVVV....EEE..........
+//.RRR....RRRR..EEEEEEEEEEE.SSSSSSSSSS..PPP.........OOOOOOOOOOOO..NNN...NNNNN..SSSSSSSSSS..III....VVVVVV....EEEEEEEEEEE..
+//.RRR....RRRR..EEEEEEEEEEE.SSSSSSSSSS..PPP..........OOOOOOOOOO...NNN....NNNN..SSSSSSSSSS..III....VVVVV.....EEEEEEEEEEE..
+//.RRR.....RRRR.EEEEEEEEEEE...SSSSSS....PPP............OOOOOO.....NNN....NNNN....SSSSSS....III.....VVVV.....EEEEEEEEEEE..
+//....................................................................................................................... /*
+
+
+
+    /* Medium devices (landscape tablets, 768px and up) */
+        
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+@media only screen and (min-width: 768px) { 
+
+    .js-help-screen {
+        width: 100%;
+    }
+
+    .js-help-screen-container {
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    #anim_mobile {
+        display: none;
+    }
+
+    #input_field_animation {
+        max-width: 500px;
+        display: block;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    
+
+    .input_screen {
+        position: relative;
+        width: 75%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-60%, -50%);
+    }
+
+    .input_screen_container {
+        width: 50%;
+        height: 100%;
+        vertical-align: middle;
+
+    }
+
+    .splashscreen {
+        display: flex; 
+        height: 85vh;
+    }
+
+    .splashscreen_lottie {
+        margin: auto;
+        width: 50%;
+
+    }
+    .zodiac_button_container {
+        display: flex;
+        width: 100%;
+    }
+
+    .zodiac_button {
+        z-index: 1;
+        width: 42px;
+        height: 100%;
+        margin-left: 1rem;
+    }
+
+    .icon_container {
+        width: 42px;
+        height: 42px;
+        border: white solid 2px;
+        border-radius: 100%;
+        margin: 0 auto;
+    }
+
+    .zodiac_button img {
+        display: block;
+        width: 42px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer {
+        border-top: 1px solid white;
+        padding: 1rem 3rem;
+    }
+
+    .navigation {
+
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+
+    .hint {
+        z-index: 100;
+        opacity: 0;
+        position: absolute;
+        top: -50px;
+        background-color: rgb(109, 109, 109);
+        border-radius: 10rem;
+        color: rgba(255, 255, 255, 0.616);
+        padding: 1rem;
+        transition: 0.5s;
+    }
+
+    .switch {
+        display: inline;
+        float: left;
+        margin: 0;
+    }
+    .switch:hover > .hint {
+        top: -60px;
+        opacity: 1;
+    }
+
+    .button-info-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .meta-data {
+        position: absolute;
+        margin: 0 auto;
+        transform: translateX(-30%);
+        opacity: 0;
+        padding: 0.5rem 0;
+        width: 100px;
+        height: 20px;
+        background-color: rgb(109, 109, 109);
+        color: rgba(255, 255, 255, 0.616);
+        border-radius: 20rem;
+        transition: 0.5s;
+    }
+
+    a:hover .meta-data {
+        opacity: 1;
+        transform: translateX(-30%) translateY(-70px);
+        background-color: rgb(109, 109, 109);
+
+    }
+
+    .js-zodiac-sign-name {
+        display: inline-block;
+        text-align: center;
+        font-size: 1rem;
+        transform: translateY(-2.25rem);
+
+    }
+
+    .js-zodiac-sign-name.active {
+        transform: translateY(-0.75rem);
+        font-size: 1rem;
+        opacity: .75;
+    }
+
+    .js-cereal-name {
+        display: inline-block;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+} 
