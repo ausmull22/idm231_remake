@@ -1,13 +1,12 @@
 @font-face {
-      font-family: Quicksand;
-      src: url(font\quicksand_primary\Quicksand-Regular.ttf);
-      font-weight: normal;
+    font-family: Quicksand;
+    src: local(font\quicksand_primary\Quicksand-Regular.ttf);
+    font-weight: normal;
 }
 
-@font-face {
-    font-family: 'Lemon/Milk';
-    src: url('https://www.fontsaddict.com/fontface/lemonmilk.ttf');
-  }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
     font-family: Quicksand;
@@ -16,16 +15,22 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Lemon/Milk;
     text-align: center;
+    font-weight: Bold;
+
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: Sofia Sans Extra Condensed;
+    font-weight: normal;
+
+
 }
 
 h2 {
-    font-family: Lemonmilk;
-    font-weight: normal;
+    font-weight: Bold;
 }
-
-
 
 
 
@@ -397,6 +402,16 @@ button:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;    
+}
+
+.selected-cereal-name {
+
+}
+
+.selected-zodiac-name {
+    margin-top: -1rem;
+    font-weight: normal;
+    opacity: 0.75;
 }
 
 .cereal-description {

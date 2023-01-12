@@ -19,6 +19,6 @@ var animation_aries = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'lottie/virgo.json'
+    path: 'lottie/animation_test2.json'
 })
 
