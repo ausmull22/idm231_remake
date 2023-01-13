@@ -486,6 +486,90 @@ button:hover {
 }
 
 
+/* /.............................................................................................................
+//.....GGGGGG.....RRRRRRRRR.......AAAA......DDDDDDDDD....III..EEEEEEEEEE..NNNN....NNN..TTTTTTTTTTS..SSSSSS.....
+//...GGGGGGGGGG...RRRRRRRRRRR.....AAAAA.....DDDDDDDDDD...III..EEEEEEEEEE..NNNN....NNN..TTTTTTTTTTSSSSSSSSSS....
+//...GGGGGGGGGGG..RRRRRRRRRRR.....AAAAA.....DDDDDDDDDDD..III..EEEEEEEEEE..NNNNN...NNN..TTTTTTTTTTSSSSSSSSSSS...
+//..GGGG....GGGG..RRR.....RRR....AAAAAA.....DDD....DDDD..III..EEE.........NNNNN...NNN......TTT....SSS...SSSS...
+//..GGG......GG...RRR.....RRR....AAAAAAA....DDD.....DDD..III..EEE.........NNNNNN..NNN......TTT....SSSS.........
+//.GGGG...........RRRRRRRRRRR...AAAA.AAA....DDD.....DDDD.III..EEEEEEEEEE..NNNNNNN.NNN......TTT....SSSSSSS......
+//.GGGG...GGGGGG..RRRRRRRRRR....AAA..AAAA...DDD.....DDDD.III..EEEEEEEEEE..NNN.NNN.NNN......TTT.....SSSSSSSS....
+//.GGGG...GGGGGG..RRRRRRRR......AAAAAAAAA...DDD.....DDDD.III..EEEEEEEEEE..NNN.NNNNNNN......TTT.......SSSSSSS...
+//..GGG...GGGGGG..RRR..RRRR....AAAAAAAAAA...DDD.....DDD..III..EEE.........NNN..NNNNNN......TTT...........SSSS..
+//..GGGG.....GGG..RRR...RRRR...AAAAAAAAAAA..DDD....DDDD..III..EEE.........NNN..NNNNNN......TTT...SSSS....SSSS..
+//...GGGGGGGGGGG..RRR....RRRR..AAA.....AAA..DDDDDDDDDDD..III..EEEEEEEEEEE.NNN...NNNNN......TTT....SSSSSSSSSS...
+//...GGGGGGGGGG...RRR....RRRR.AAAA.....AAAA.DDDDDDDDDD...III..EEEEEEEEEEE.NNN....NNNN......TTT....SSSSSSSSSS...
+//.....GGGGGG.....RRR.....RRRRAAA......AAAA.DDDDDDDDD....III..EEEEEEEEEEE.NNN....NNNN......TTT......SSSSSS.....
+//............................................................................................................. */
+
+
+body.aries {
+    background-image: url('/images/background_gradients/aries.png');
+    background-size: cover;
+}
+
+
+body.taurus {
+    background-image: url('/images/background_gradients/taurus.png');
+    background-size: cover;
+}
+
+body.gemini {
+    background-image: url('/images/background_gradients/gemini.png');
+    background-size: cover;
+}
+
+body.cancer {
+    background-image: url('/images/background_gradients/cancer.png');
+    background-size: cover;
+}
+
+body.leo {
+    background-image: url('/images/background_gradients/leo.png');
+    background-size: cover;
+}
+
+body.virgo {
+    background-image: url('/images/background_gradients/virgo.png');
+    background-size: cover;
+}
+
+body.libra {
+    background-image: url('/images/background_gradients/libra.png');
+    background-size: cover;
+}
+
+body.scorpio {
+    background-image: url('/images/background_gradients/scorpio.png');
+    background-size: cover;
+}
+
+body.sagittarius {
+    background-image: url('/images/background_gradients/saggitarus.png');
+    background-size: cover;
+}
+
+body.capricorn {
+    background-image: url('/images/background_gradients/capricorn.png');
+    background-size: cover;
+}
+
+body.aquarius {
+    background-image: url('/images/background_gradients/capricorn.png');
+    background-size: cover;
+}
+
+body.pisces {
+    background-image: url('/images/background_gradients/pisces.png');
+    background-size: cover;
+}
+
+
+
+
+
+
+
 
 
 /* //.......................................................................................................................
