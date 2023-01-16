@@ -22,13 +22,14 @@
     <title>Document</title>
 </head>
 <style>
-    body {
-        background-image: url(/images/gradient_background.jpg);
-        background-size: cover;
+    body { /* Body Style */
+        background-image: url(/images/gradient_background.jpg); /* Background Image for Selected Zodiac */
+        background-size: cover; 
+        height: 100%;
     }
 
-    #js-preloader {
-        background-color: red;
+    #js-preloader { /* Styling for Preloader */
+        background-color: black;
         background-size: 100%;
         height: 100vh;
         width: 100%;
@@ -48,34 +49,37 @@
         margin-bottom: 1rem;
     }
 
+    #selected_zodiac_aries {
+        display: none;
+    } 
     
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
 
-        .selected-zodiac-container {
-            display: flex;
+        .selected-zodiac-container { 
+            display: flex;  /* Flex to fit two columns vertically */
             height: 85vh;
         }
 
         .spline-image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex;  /* Flex to center */
+            justify-content: center; /* Horizontally Centered */
+            align-items: center; /* Vertically Centered */
             height: 100%;
         }
 
-        .spline-image-container iframe {
-            width: 500px;
-            height: 500px;
+        .spline-image-container iframe { /* iFrame including the Spline Image */
+            width: 500px; /* Width of iFrame*/
+            height: 500px; /* Height of iFrame */
             
         }
 
         .selected-zodiac-info {
-            width: 70%;
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            margin: 0 0;
+            width: 70%; /* Width */
+            display: flex; /* Flex */
+            justify-content: left; /* Push container of info to the left horizontally */
+            align-items: center; /* Align containter to the middle vertically */
+            margin: 0 0; /* Removes all margins. COME BACK */
             
         }
 
@@ -93,41 +97,42 @@
         }
 
         #selected_zodiac_aries {
+            display: block;
             width: 100%;
             height: 100%;
         } 
 
-
         #mobile_image_replacement {
             display: none;
         }
-
-
     
     } 
 
 
 </style>
-<body class="aries">
-    <div id="js-preloader">
-        <div class="vertical-center">
-            <img src="/images/alphabits_test.png">
+<body class="aries">  <!-- Aries --> 
+    <div id="js-preloader"> <!-- Javascript Pre-Loader --> 
+        <div class="vertical-center"> <!-- Div Container to align items at the center--> 
+            <img src="/images/alphabits_test.png"> <!-- Image and other assets associated with the pre-loader --> 
         </div>
     </div>
 
-
-    <div class="selected-zodiac-container">
-        <div class="image-container">
-            <div class="spline-image-container">
-                <iframe src='https://my.spline.design/untitled-04fecd7c522c0d0ec5672c081eebb71f/' frameborder='0' width='100%' height='600px'></iframe>
+    <div class="selected-zodiac-container"> <!-- Container containing aspects of the selected zodiac --> 
+        <div class="image-container"> <!-- First Column - Image/3D Model Container --> 
+            <div class="spline-image-container"> <!-- Container containing Spline 3D Model--> 
+                <iframe src='https://my.spline.design/untitled-fa8f6e8e52fe50b7f05d3eb4e5a0b080/' frameborder='0' width='100%' height='100%'></iframe> <!-- Spline Model --> 
             </div>
+            <div id="mobile_image_replacement"> <!-- Alternative Image Container in case Spline Model isn't functioning -->
+                <img src="/images/alphabits_test.png" alt=""> <!-- Alternative Image -->
+            </div>    
         </div>
-        <div class="selected-zodiac-info">
-            <div class="info-responsive-container">
-                <div class="selected_zodiac_lottie_container"> 
-                    <div id="selected_zodiac_aries"></div>
-                    <script src="/scripts/lottie.js"></script>
-                    <script>
+
+        <div class="selected-zodiac-info"> <!-- Second Column - Info about the Zodiac -->  
+            <div class="info-responsive-container"> <!-- Container for Info -->  
+                <div class="selected_zodiac_lottie_container"> <!-- Container for Playing Lottie Anation -->  
+                    <div id="selected_zodiac_aries"></div> <!-- Box that will display Lottie Animation -->
+                    <script src="/scripts/lottie.js"></script> <!-- Lottie Player --> 
+                    <script> 
                         var animation_aries = bodymovin.loadAnimation({
                             container: document.getElementById('selected_zodiac_aries'),
                             renderer: 'svg',
@@ -135,19 +140,16 @@
                             autoplay: true,
                             path: '/lottie/animation_test_4.json'
                         })
-                    </script>
-                    <div id="mobile_image_replacement">
-                        <img src="/images/alphabits_test.png" alt="">
-                    </div>    
+                    </script> <!-- Script that looks for animation to played in specific container -->
                 </div>
-                <h1 class="selected-cereal-name">Lucky Charms</h1>
-                <h2 class="selected-zodiac-name">Aries</h2>
-                <p class="cereal-description">
+                <h1 class="selected-cereal-name">Lucky Charms</h1> <!-- Cereal Name --> 
+                <h2 class="selected-zodiac-name">Aries</h2> <!-- Zodiac --> 
+                <p class="cereal-description"> <!-- Description --> 
                     Lucky Charms has all the traits of Aries, especially all the magically delicious lucky stuff: hearts, stars and horseshoes, clovers and blue moons, unicorns, rainbows and tasty red balloons! Plus crunchy, gluten-free oats, too!
                 </p>
 
-                <div class="center_button">
-                    <button id="js-return-button" onclick="window.location.href='/index.html';"> Return </button>
+                <div class="center_button"> <!-- Container for Return Button --> 
+                    <button id="js-return-button" onclick="window.location.href='/index.html';"> Return </button>  <!-- Return Button --> 
                 </div>
             </div>
         </div>
@@ -155,7 +157,7 @@
     </div>
 
   
-    <div id="footer"></div>
+    <div id="footer" class="hide_in_mobile"></div>  <!-- Footer --> 
 
 
 
