@@ -9,6 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
+    margin: 0rem;
     font-family: Quicksand;
     background-color: black;
     color: white;
@@ -716,6 +717,7 @@ body {
         color: rgba(255, 255, 255, 0.616);
         padding: 1rem;
         transition: 0.5s;
+        transform: translateX(-17%);
     }
 
     .switch {
@@ -731,16 +733,18 @@ body {
     .button-info-container {
         display: flex;
         flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
     }
 
     .meta-data {
+        display: inline;
         position: absolute;
-        margin: 0 auto;
-        transform: translateX(-30%);
         opacity: 0;
-        padding: 0.5rem 0;
-        width: 100px;
-        height: 20px;
+        width: fit-content;
+        min-width: 40px;
+        transform: translateY(0%);
+        padding: 0.25rem 0.75rem;
         background-color: rgb(109, 109, 109);
         color: rgba(255, 255, 255, 0.616);
         border-radius: 20rem;
@@ -749,33 +753,148 @@ body {
 
     a:hover .meta-data {
         opacity: 1;
-        transform: translateX(-30%) translateY(-70px);
-        background-color: rgb(109, 109, 109);
+        transform: translateY(-120%);
+
+    }
+
+    a:hover .meta-data.active {
+        opacity: 1;
+        transform: translateY(-90%);
+
+    }
+    
+    .meta-data.active {
+        height: 40px;
 
     }
 
     .js-zodiac-sign-name {
+        margin: 0 0;
+        padding: 0;
+        text-align: center;
+        transform: translate(0%, 0%);
         display: inline-block;
         text-align: center;
-        font-size: 1rem;
-        transform: translateY(-2.25rem);
-
-    }
-
-    .js-zodiac-sign-name.active {
-        transform: translateY(-0.75rem);
-        font-size: 1rem;
-        opacity: .75;
     }
 
     .js-cereal-name {
-        display: inline-block;
-        font-size: 1rem;
-        margin: 0;
+        display: none;
+
     }
 
+    .js-cereal-name.active {
+        font-size: 1rem;
+        transform: translateY(-0.1rem);
+    }
+
+    .js-zodiac-sign-name.active {
+        font-size: 0.8rem;
+        transform: translateY(-1.40rem);
+    }
+
+    
 
     .hide_in_mobile {
         display: block;
     }
 } 
+
+
+body { /* Body Style */
+    background-image: url(/images/gradient_background.jpg); /* Background Image for Selected Zodiac */
+    background-size: cover; 
+    height: 100%;
+}
+
+#js-preloader { /* Styling for Preloader */
+    background-color: black;
+    background-size: 100%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 2000;
+    pointer-events: none;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.image-container {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: visible;
+    margin-bottom: 1rem;
+}
+
+#selected_zodiac_aries {
+    display: none;
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .selected-zodiac-container { 
+        display: flex;  /* Flex to fit two columns vertically */
+        height: 85vh;
+    }
+
+    .spline-image-container {
+        display: flex;  /* Flex to center */
+        justify-content: center; /* Horizontally Centered */
+        align-items: center; /* Vertically Centered */
+        height: 100%;
+    }
+
+    .spline-image-container iframe { /* iFrame including the Spline Image */
+        width: 500px; /* Width of iFrame*/
+        height: 500px; /* Height of iFrame */
+        
+    }
+
+    .selected-zodiac-info {
+        width: 70%; /* Width */
+        display: flex; /* Flex */
+        justify-content: left; /* Push container of info to the left horizontally */
+        align-items: center; /* Align containter to the middle vertically */
+        margin: 0 0; /* Removes all margins. COME BACK */
+        
+    }
+
+    .info-responsive-container { /* COME BACK */
+        width: 400px;
+        margin: 0;
+
+ 
+    }
+    
+    .selected_zodiac_lottie_container {
+        width: 100%;
+        height: 100px;
+        
+    }
+
+    #selected_zodiac_aries {
+        display: block;
+        width: 100%;
+        height: 100%;
+    } 
+
+    #mobile_image_replacement {
+        display: none;
+    }
+
+} 
+
+
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0)}
+    25% { transform: translateX(5px);
+    background-color: red; }
+    50% { transform: translateX(-5px);
+        background-color: red; }
+    75% { transform: translateX(5px);
+        background-color: red; }
+    100% { transform: translateX(0) }
+}

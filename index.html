@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/new_animations.js"></script> 
+    <script src="scripts/convert_date.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
@@ -87,7 +88,7 @@
                             <form> 
                                 <div class="inputBox">
 
-                                    <input type="text" onfocus="(this.type='date')" required="required">
+                                    <input id="input" type="text" onfocus="(this.type='date')" required="required">
                                     <span>Insert Birth Date</span>
                             
                                 </div>
@@ -96,7 +97,7 @@
                         
                         <div class="button_array">
                             <!-- Enter Button to Determine Zodiac -->
-                            <button id="js-discover-button"><i class="fa fa-sun-o"></i> Discover Cereal</button>
+                            <button id="js-discover-button" onclick="convert_date()"><i class="fa fa-sun-o"></i> Discover Cereal</button>
 
                             <!-- Enter Button for Help -->
                             <button id="js-help-button" onclick="toggle_instructions()"><i class="fa fa-question"></i> Help</button>
@@ -118,7 +119,8 @@
 
         let loader = document.getElementById("js-preloader");
 
-        window.addEventListener("load", function() {
+        window.addEventListener("load", function loader_disappear() {
+            
             loader.style.opacity ="0";
         })
 

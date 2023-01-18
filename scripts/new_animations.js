@@ -26,6 +26,11 @@ function result() {
         x.classList.toggle('active');
     }
 
+    let toggleAble_meta_data = document.querySelectorAll('.meta-data');
+    
+    for(let x of toggleAble_meta_data) {
+        x.classList.toggle('active');
+    }
 
 }
 
