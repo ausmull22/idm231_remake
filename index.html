@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/background.css">
     <script src="scripts/new_animations.js"></script> 
     <script src="scripts/convert_date.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
@@ -14,117 +15,119 @@
         $(function(){
           $("#footer").load("footer.html"); 
         });
+
+        $(function(){
+          $("#js-preloader").load("loader.html"); 
+        });
     </script> 
+    
     <title>Document</title>
-    <style>
-        body {
-            background-image: url(images/gradient_background.jpg);
-            background-size: cover;
-        }
-    </style>
+   
 </head>
 <body>
 
-        <div id="js-preloader">
-            <div class="vertical-center">
-                <img src="images/alphabits_test.png">
-            </div>
-        </div>
-
-
-        <div class="js-help-screen">
-            <div class="js-help-screen-container">
-
-                <div id="lottie-animation">
-                    <div id="anim_mobile"></div>
-                    <script src="scripts/lottie.js"></script>
-                    <script src="scripts/zodiac_animation.js"></script>
-                </div>
-
-                <div class="logo_container">
-                    <img src="/images/Logo.svg">
-                    <!-- Heading asking for User to Enter Birthday -->
-                    <!-- Container with Form -->
-                </div>
-
-                <p class="instructions">
-                    Enter your birthday in the input box, and click enter. After clicking the enter button, 
-                    you will be given a cereal brand based on your zodiac. 
-                    You can also select zodiacs at the bottom right of the screen.
-                </p>
-                <div class="center_button">
-                    <button id="js-proceed-button" onclick="toggle_instructions()"> Proceed </button>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- All Content that will be loaded-->
-        <div class = "content">        
-            <!-- Splashscreen -->
-
-            <div class = "splashscreen">
-                
-                <!-- Container Displaying the Cereal On-Screen -->
-                <div class = "splashscreen_lottie"> 
-                    <div id="input_field_animation"></div>
-                    <script src="scripts/zodiac_animation.js"></script>
-                </div>
-
-                <!--Input Screen-->
-
-                <div class="input_screen_container">
-                    <div class = input_screen>
-                        <!-- Heading of Title -->
-                        <div class="logo_container">
-                            <img src="/images/Logo.svg">
-                            <!-- Heading asking for User to Enter Birthday -->
-                            <!-- Container with Form -->
-                        </div>
-
-                        
-                        <div id="js-warning-animation" class="input_form">
-                            <!-- Form Asking for Birthday-->
-                            <form> 
-                                <div class="inputBox">
-
-                                    <input id="input" type="text" onfocus="(this.type='date')" required="required">
-                                    <span>Insert Birth Date</span>
-                            
-                                </div>
-                            </form>
-                        </div>
-                        
-                        <div class="button_array">
-                            <!-- Enter Button to Determine Zodiac -->
-                            <button id="js-discover-button" onclick="convert_date()"><i class="fa fa-sun-o"></i> Discover Cereal</button>
-
-                            <!-- Enter Button for Help -->
-                            <button id="js-help-button" onclick="toggle_instructions()"><i class="fa fa-question"></i> Help</button>
-                        </div>
-
-                    </div>
-                </div>
-
-            
-            </div>
-        </main>
- 
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
+
+    <div id="js-preloader">
+    </div>
+
+
+    <div class="js-help-screen">
+        <div class="js-help-screen-container">
+
+            <div id="lottie-animation">
+                <div id="anim_mobile"></div>
+                <script src="scripts/lottie.js"></script>
+                <script src="scripts/zodiac_animation.js"></script>
+            </div>
+
+            <div class="logo_container">
+                <img src="/images/Logo.svg">
+                <!-- Heading asking for User to Enter Birthday -->
+                <!-- Container with Form -->
+            </div>
+
+            <p class="instructions">
+                Enter your birthday in the input box, and click enter. After clicking the enter button, 
+                you will be given a cereal brand based on your zodiac. 
+                You can also select zodiacs at the bottom right of the screen.
+            </p>
+            <div class="center_button">
+                <button id="js-proceed-button" onclick="toggle_instructions()"> Proceed </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- All Content that will be loaded-->
+    <div class = "content">        
+        <!-- Splashscreen -->
+        <div class = "splashscreen">
+            
+            <!-- Container Displaying the Cereal On-Screen -->
+            <div class = "splashscreen_lottie"> 
+                <div id="input_field_animation"></div>
+                <script src="scripts/zodiac_animation.js"></script>
+            </div>
+
+            <!--Input Screen-->
+
+            <div class="input_screen_container">
+                <div class = input_screen>
+                    <!-- Heading of Title -->
+                    <div class="logo_container">
+                        <img src="/images/Logo.svg">
+                        <!-- Heading asking for User to Enter Birthday -->
+                        <!-- Container with Form -->
+                    </div>
+
+                    
+                    <div id="js-warning-animation" class="input_form">
+                        <!-- Form Asking for Birthday-->
+                        <form> 
+                            <div class="inputBox">
+
+                                <input id="input" type="text" onfocus="(this.type='date')" required="required">
+                                <span>Insert Birth Date</span>
+                        
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="button_array">
+                        <!-- Enter Button to Determine Zodiac -->
+                        <button id="js-discover-button" onclick="convert_date()"><i class="fa fa-sun-o"></i> Discover Cereal</button>
+
+                        <!-- Enter Button for Help -->
+                        <button id="js-help-button" onclick="toggle_instructions()"><i class="fa fa-question"></i> Help</button>
+                    </div>
+
+                </div>
+            </div>
+        
+        </div>
+    </main>
+
 
     <div id="footer"></div>
 
-
-    <script>
-
+    <script> 
         let loader = document.getElementById("js-preloader");
-
-        window.addEventListener("load", function loader_disappear() {
-            
+    
+        window.addEventListener("load", function() {
+            loader.style.filter ="blur(10px)";
             loader.style.opacity ="0";
         })
-
+    
     </script>
+    
+
+
+
 
 </body>
 </html>

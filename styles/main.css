@@ -11,7 +11,6 @@
 body {
     margin: 0rem;
     font-family: Quicksand;
-    background-color: black;
     color: white;
 }
 
@@ -221,6 +220,10 @@ h2 {
     width: 38%;
 }
 
+
+#sunrise_loading {
+    width: 250px;
+}
 
 /* Display Cereal Switch */
 
@@ -476,7 +479,11 @@ button:hover {
     align-items: center;
     transition: 0.5s;
     opacity: 1;
+    display: flex;
+    justify-content: center;
 }
+
+
 
 .vertical-center {
     margin: 0;
@@ -497,6 +504,11 @@ button:hover {
 }
 
 
+
+.sunrise_loading {
+    width: 400px;
+    height: 400px;
+}
 
 /* /.............................................................................................................
 //.....GGGGGG.....RRRRRRRRR.......AAAA......DDDDDDDDD....III..EEEEEEEEEE..NNNN....NNN..TTTTTTTTTTS..SSSSSS.....
@@ -801,8 +813,6 @@ body {
 
 
 body { /* Body Style */
-    background-image: url(/images/gradient_background.jpg); /* Background Image for Selected Zodiac */
-    background-size: cover; 
     height: 100%;
 }
 

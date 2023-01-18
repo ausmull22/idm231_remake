@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/barba.css">
     <script src="/scripts/new_animations.js"></script> 
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script> 
@@ -25,8 +24,28 @@
 <body class="aries">  <!-- Aries --> 
     <div id="js-preloader"> <!-- Javascript Pre-Loader --> 
         <div class="vertical-center"> <!-- Div Container to align items at the center--> 
-            <img src="/images/alphabits_test.png"> <!-- Image and other assets associated with the pre-loader --> 
+            <div id="sunrise_loading"></div>
+            <script src="/scripts/lottie.js"></script>
+            <script> 
+                var animation_aries = bodymovin.loadAnimation({
+                    container: document.getElementById('sunrise_loading'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: '/lottie/loading_screen.json'
+                })
+            </script> 
         </div>
+        <script> 
+
+            let loader = document.getElementById("js-preloader");
+    
+            window.addEventListener("load", function() {
+                loader.style.filter ="blur(10px)";
+                loader.style.opacity ="0";
+            })
+    
+        </script>
     </div>
 
     <div class="selected-zodiac-container"> <!-- Container containing aspects of the selected zodiac --> 
@@ -71,17 +90,9 @@
   
     <div id="footer" class="hide_in_mobile"></div>  <!-- Footer --> 
 
+    <!-- Preloader Script -->
 
 
-    <script> <!-- Preloader Script -->
-
-        let loader = document.getElementById("js-preloader");
-
-        window.addEventListener("load", function() {
-            loader.style.opacity ="0";
-        })
-
-    </script>
 
 
 
