@@ -7,11 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="js-preloader"> <!-- Javascript Pre-Loader --> 
-        <div class="vertical-center"> <!-- Div Container to align items at the center--> 
-            <img src="/images/alphabits_test.png"> <!-- Image and other assets associated with the pre-loader --> 
-        </div>
+    <div class="vertical-center"> <!-- Div Container to align items at the center--> 
+        <div id="sunrise_loading"></div> <!-- Loading Sunrise Lottie Animation -->
+        <script src="/scripts/lottie.js"></script> <!-- Loading Sunrise Lottie Animation -->
+        <script> 
+            var animation_aries = bodymovin.loadAnimation({
+                container: document.getElementById('sunrise_loading'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: '/lottie/loading_screen.json'
+            })
+        </script> 
     </div>
+    <script> 
+
+        let loader = document.getElementById("js-preloader");
+
+        window.addEventListener("load", function() {
+            loader.style.filter ="blur(10px)";
+            loader.style.opacity ="0";
+        })
+
+    </script>
 
 
 </body>
