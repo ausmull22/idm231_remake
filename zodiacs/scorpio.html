@@ -49,7 +49,7 @@
                     <!-- Box that will display Lottie Animation -->
                     <div id="selected-zodiac-lottie">
                         <!-- Script that looks for animation to played in specific container -->
-                        <script src="../scripts/animation_scripts/libra.js"></script>
+                        <script src="../scripts/animation_scripts/scorpio.js"></script>
                     </div> 
                 </div>
                 <!-- Cereal Name -->
@@ -73,8 +73,16 @@
     <div id="footer" class="hide-in-mobile"></div> 
 
     <!-- Preloader Script -->
-    <script src="../scripts/loader.js"></script>
+    <script> 
 
+        let loader = document.getElementById("js-preloader");
+
+        window.addEventListener("load", function() {
+            loader.style.filter ="blur(10px)";
+            loader.style.opacity ="0";
+        })
+
+    </script>
 
 </body>
 </html>
