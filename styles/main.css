@@ -529,23 +529,23 @@ button:hover {
 
 
 body.aries {
-    background-image: url('/images/background_gradients/aries.png');
+    background-image: url('../images/background_gradients/aries.png');
     background-size: cover;
 }
 
 
 body.taurus {
-    background-image: url('/images/background_gradients/taurus.png');
+    background-image: url('../images/background_gradients/taurus.png');
     background-size: cover;
 }
 
 body.gemini {
-    background-image: url('/images/background_gradients/gemini.png');
+    background-image: url('../images/background_gradients/gemini.png');
     background-size: cover;
 }
 
 body.cancer {
-    background-image: url('/images/background_gradients/cancer.png');
+    background-image: url('../images/background_gradients/cancer.png');
     background-size: cover;
 }
 
