@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="/scripts/new_animations.js"></script> 
+    <script src="/scripts/lottie.js"></script> <!-- Lottie Player --> 
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <title>Cereal Zodiac - Aquarius</title>
+</head>
+
+<!-- cancer --> 
+<body class="pisces"> 
+
+    <!-- Javascript Pre-Loader --> 
+    <div id="js-preloader"> 
+    </div>
+
+    <!-- Container containing aspects of the selected zodiac --> 
+    <div class="selected-zodiac-container">
+        <!-- First Column - Image/3D Model Container -->  
+        <div class="image-container"> 
+            <!-- First Column - Image/3D Model Container --> 
+            <div class="spline-image-container"> 
+                <!-- Spline Model --> 
+                <iframe src='https://my.spline.design/reesespuff-de7d7e0394ca8676fe938e2b7d8cfc9f/'></iframe>
+            </div>
+            <!-- Alternative Image Container in case Spline Model isn't functioning -->
+            <div id="mobile-image-replacement">
+                <!-- Alternative Image -->
+                <img src="/images/alphabits_test.png" alt="Alpha Bits"> <!-- Alternative Image -->
+            </div>    
+        </div>
+
+        <!-- Second Column - Info about the Zodiac -->  
+        <div class="selected-zodiac-info"> 
+            <!-- Container for Info -->  
+            <div class="info-responsive-container">
+                <!-- Container for Playing Lottie Anation -->
+                <div class="selected-zodiac-lottie-container">  
+                    <!-- Box that will display Lottie Animation -->
+                    <div id="selected-zodiac-lottie">
+                        <!-- Script that looks for animation to played in specific container -->
+                        <script src="/scripts/animation_scripts/sagittarius.js"></script>
+                    </div> 
+                </div>
+                <!-- Cereal Name -->
+                <h1 class="selected-cereal-name">Reeses Puff</h1>
+                <!-- Zodiac -->
+                <h2 class="selected-zodiac-name">Pisces</h2>
+                <!-- Description --> 
+                <p class="cereal-description">
+                    Reese's Puffs brings together delicious real Reese's peanut butter and Hershey’s cocoa on sweet crunchy corn puffs kids and teens love. I mean, what's not to like about the creamy, crunchy and chocolatey puffs?                <!-- Container for Return Button -->
+                <div class="center-button">  
+                    <!-- Return Button --> 
+                    <button id="js-return-button" onclick="window.location.href='/index.html';"> Return </button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer --> 
+    <div id="footer" class="hide-in-mobile"></div> 
+
+    <!-- Preloader Script -->
+    <script src="/scripts/loader.js"></script>
+
+
+</body>
+</html>

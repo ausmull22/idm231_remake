@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="/scripts/new_animations.js"></script> 
+    <script src="/scripts/lottie.js"></script> <!-- Lottie Player --> 
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <title>Cereal Zodiac - Taurus</title>
+</head>
+
+<!-- Aries --> 
+<body class="taurus"> 
+
+    <!-- Javascript Pre-Loader --> 
+    <div id="js-preloader"> 
+    </div>
+
+    <!-- Container containing aspects of the selected zodiac --> 
+    <div class="selected-zodiac-container">
+        <!-- First Column - Image/3D Model Container -->  
+        <div class="image-container"> 
+            <!-- First Column - Image/3D Model Container --> 
+            <div class="spline-image-container"> 
+                <!-- Spline Model --> 
+                <iframe src='https://my.spline.design/trix-8851b9f82c05f62913935a93c83610c5/'></iframe>
+            </div>
+            <!-- Alternative Image Container in case Spline Model isn't functioning -->
+            <div id="mobile-image-replacement">
+                <!-- Alternative Image -->
+                <img src="/images/alphabits_test.png" alt="Alpha Bits"> <!-- Alternative Image -->
+            </div>    
+        </div>
+
+        <!-- Second Column - Info about the Zodiac -->  
+        <div class="selected-zodiac-info"> 
+            <!-- Container for Info -->  
+            <div class="info-responsive-container">
+                <!-- Container for Playing Lottie Anation -->
+                <div class="selected-zodiac-lottie-container">  
+                    <!-- Box that will display Lottie Animation -->
+                    <div id="selected-zodiac-lottie">
+                        <!-- Script that looks for animation to played in specific container -->
+                        <script src="/scripts/animation_scripts/taurus.js"></script>
+                    </div> 
+                </div>
+                <!-- Cereal Name -->
+                <h1 class="selected-cereal-name">Trix</h1>
+                <!-- Zodiac -->
+                <h2 class="selected-zodiac-name">Taurus</h2>
+                <!-- Description --> 
+                <p class="cereal-description">
+                    Raspberry Red, Lemony Lemon, Orangey Orange, Wildberry Blue, Grapity Purple, And Watermelon! When Trix launched in 1954, it was the first fruit-flavored cereal that was colorful and fun. While Trix cereal has evolved since their initial launch, the Punchline has remained unchanged: Silly rabbit, Trix are for kids!
+                </p>
+                <!-- Container for Return Button -->
+                <div class="center-button">  
+                    <!-- Return Button --> 
+                    <button id="js-return-button" onclick="window.location.href='/index.html';"> Return </button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer --> 
+    <div id="footer" class="hide-in-mobile"></div> 
+
+    <!-- Preloader Script -->
+    <script src="/scripts/loader.js"></script>
+
+
+</body>
+</html>

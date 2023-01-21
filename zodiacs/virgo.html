@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="/scripts/new_animations.js"></script> 
+    <script src="/scripts/lottie.js"></script> <!-- Lottie Player --> 
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <title>Cereal Zodiac - Virgo</title>
+</head>
+
+<!-- cancer --> 
+<body class="virgo"> 
+
+    <!-- Javascript Pre-Loader --> 
+    <div id="js-preloader"> 
+    </div>
+
+    <!-- Container containing aspects of the selected zodiac --> 
+    <div class="selected-zodiac-container">
+        <!-- First Column - Image/3D Model Container -->  
+        <div class="image-container"> 
+            <!-- First Column - Image/3D Model Container --> 
+            <div class="spline-image-container"> 
+                <!-- Spline Model --> 
+                <iframe src='https://my.spline.design/cinnamontoastcrunch-6b5bfcedf2351b0ee47f69a312dda14b/'></iframe>
+            </div>
+            <!-- Alternative Image Container in case Spline Model isn't functioning -->
+            <div id="mobile-image-replacement">
+                <!-- Alternative Image -->
+                <img src="/images/alphabits_test.png" alt="Alpha Bits"> <!-- Alternative Image -->
+            </div>    
+        </div>
+
+        <!-- Second Column - Info about the Zodiac -->  
+        <div class="selected-zodiac-info"> 
+            <!-- Container for Info -->  
+            <div class="info-responsive-container">
+                <!-- Container for Playing Lottie Anation -->
+                <div class="selected-zodiac-lottie-container">  
+                    <!-- Box that will display Lottie Animation -->
+                    <div id="selected-zodiac-lottie">
+                        <!-- Script that looks for animation to played in specific container -->
+                        <script src="/scripts/animation_scripts/virgo.js"></script>
+                    </div> 
+                </div>
+                <!-- Cereal Name -->
+                <h1 class="selected-cereal-name">Cinnamon Toast Crunch</h1>
+                <!-- Zodiac -->
+                <h2 class="selected-zodiac-name">Virgo</h2>
+                <!-- Description --> 
+                <p class="cereal-description">
+                    Just like the little ones you love, Vanilla Life Cereal tastes simply sweet and is totally irresistible. Life is a breakfast cereal made by the Quaker Oats Company. It was formerly made of oats, soy protein concentrate, sodium casienate and sugar, but now also contains corn flour, whole wheat flour, and rice flour. Introduced in 1961, the cereal is distinguished by its characteristic brown checkered square pattern.
+                </p>
+                <!-- Container for Return Button -->
+                <div class="center-button">  
+                    <!-- Return Button --> 
+                    <button id="js-return-button" onclick="window.location.href='/index.html';"> Return </button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer --> 
+    <div id="footer" class="hide-in-mobile"></div> 
+
+    <!-- Preloader Script -->
+    <script src="/scripts/loader.js"></script>
+
+
+</body>
+</html>
