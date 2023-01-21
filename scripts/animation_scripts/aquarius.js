@@ -3,5 +3,5 @@ var animation_aquarius = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/lottie/zodiac/aquarius.json'
+    path: '../lottie/zodiac/aquarius.json'
 })

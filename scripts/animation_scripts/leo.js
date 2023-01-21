@@ -3,5 +3,5 @@ var animation_leo = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/lottie/zodiac/leo.json'
+    path: '../lottie/zodiac/leo.json'
 })

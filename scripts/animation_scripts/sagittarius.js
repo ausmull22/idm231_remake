@@ -3,5 +3,5 @@ var animation_sagittarius = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/lottie/zodiac/saggitarus.json'
+    path: '../lottie/zodiac/saggitarus.json'
 })

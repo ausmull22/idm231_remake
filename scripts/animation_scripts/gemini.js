@@ -3,5 +3,5 @@ var animation_gemini = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/lottie/zodiac/gemini.json'
+    path: '../lottie/zodiac/gemini.json'
 })

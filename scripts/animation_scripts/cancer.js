@@ -3,5 +3,5 @@ var animation_cancer = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/lottie/zodiac/cancer.json'
+    path: '../lottie/zodiac/cancer.json'
 })

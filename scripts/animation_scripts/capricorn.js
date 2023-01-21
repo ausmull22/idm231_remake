@@ -3,5 +3,5 @@ var animation_capricorn = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/lottie/zodiac/capricorn.json'
+    path: '../lottie/zodiac/capricorn.json'
 })

@@ -3,5 +3,5 @@ var animation_pisces = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/lottie/zodiac/pisces.json'
+    path: '../lottie/zodiac/pisces.json'
 })

@@ -550,42 +550,42 @@ body.cancer {
 }
 
 body.leo {
-    background-image: url('/images/background_gradients/leo.png');
+    background-image: url('../images/background_gradients/leo.png');
     background-size: cover;
 }
 
 body.virgo {
-    background-image: url('/images/background_gradients/virgo.png');
+    background-image: url('../images/background_gradients/virgo.png');
     background-size: cover;
 }
 
 body.libra {
-    background-image: url('/images/background_gradients/libra.png');
+    background-image: url('../images/background_gradients/libra.png');
     background-size: cover;
 }
 
 body.scorpio {
-    background-image: url('/images/background_gradients/scorpio.png');
+    background-image: url('../images/background_gradients/scorpio.png');
     background-size: cover;
 }
 
-body.sagittarius {
-    background-image: url('/images/background_gradients/saggitarus.png');
+body.saggitarus {
+    background-image: url('../images/background_gradients/saggitarus.png');
     background-size: cover;
 }
 
 body.capricorn {
-    background-image: url('/images/background_gradients/capricorn.png');
+    background-image: url('../images/background_gradients/capricorn.png');
     background-size: cover;
 }
 
 body.aquarius {
-    background-image: url('/images/background_gradients/capricorn.png');
+    background-image: url('../images/background_gradients/capricorn.png');
     background-size: cover;
 }
 
 body.pisces {
-    background-image: url('/images/background_gradients/pisces.png');
+    background-image: url('../images/background_gradients/pisces.png');
     background-size: cover;
 }
 

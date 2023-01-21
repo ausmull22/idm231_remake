@@ -3,5 +3,5 @@ var animation_taurus = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/lottie/zodiac/taurus.json'
+    path: '../lottie/zodiac/taurus.json'
 })

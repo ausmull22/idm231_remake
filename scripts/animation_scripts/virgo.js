@@ -3,5 +3,5 @@ var animation_virgo = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/lottie/zodiac/virgo.json'
+    path: '../lottie/zodiac/virgo.json'
 })

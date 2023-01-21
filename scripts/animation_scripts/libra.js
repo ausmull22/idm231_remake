@@ -3,5 +3,5 @@ var animation_libra = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/lottie/zodiac/libra.json'
+    path: '../lottie/zodiac/libra.json'
 })

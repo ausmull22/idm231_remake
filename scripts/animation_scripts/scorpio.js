@@ -3,5 +3,5 @@ var animation_scorpio = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/lottie/zodiac/scorpio.json'
+    path: '../lottie/zodiac/scorpio.json'
 })
