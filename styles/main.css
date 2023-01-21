@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Quicksand';
-    src: url("/font/quicksand_primary/Quicksand-Regular.ttf");
+    src: url("../font/quicksand_primary/Quicksand-Regular.ttf");
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Lemon/Milk';
-    src: url("/font/lemonmilk_secondary/LemonMilk.otf");
+    src: url("../font/lemonmilk_secondary/LemonMilk.otf");
     font-weight: normal;
 }
 
