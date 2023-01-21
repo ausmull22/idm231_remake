@@ -12,9 +12,10 @@
 
 
 body {
-    margin: 0rem;
+    padding: 5px;
     font-family: 'Quicksand', sans-serif;
     color: white;
+    background-color: black;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -530,7 +531,7 @@ button:hover {
 
 body.aries {
     background-image: url('../images/background_gradients/aries.png');
-    background-size: cover;
+    background-size: 500%;
 }
 
 
@@ -591,9 +592,69 @@ body.pisces {
 
 
 
-
-
-
+@media only screen and (min-width: 768px) {
+    body.aries {
+        background-image: url('../images/background_gradients/aries.png');
+        background-size: cover;
+    }
+    
+    
+    body.taurus {
+        background-image: url('../images/background_gradients/taurus.png');
+        background-size: cover;
+    }
+    
+    body.gemini {
+        background-image: url('../images/background_gradients/gemini.png');
+        background-size: cover;
+    }
+    
+    body.cancer {
+        background-image: url('../images/background_gradients/cancer.png');
+        background-size: cover;
+    }
+    
+    body.leo {
+        background-image: url('../images/background_gradients/leo.png');
+        background-size: cover;
+    }
+    
+    body.virgo {
+        background-image: url('../images/background_gradients/virgo.png');
+        background-size: cover;
+    }
+    
+    body.libra {
+        background-image: url('../images/background_gradients/libra.png');
+        background-size: cover;
+    }
+    
+    body.scorpio {
+        background-image: url('../images/background_gradients/scorpio.png');
+        background-size: cover;
+    }
+    
+    body.saggitarus {
+        background-image: url('../images/background_gradients/saggitarus.png');
+        background-size: cover;
+    }
+    
+    body.capricorn {
+        background-image: url('../images/background_gradients/capricorn.png');
+        background-size: cover;
+    }
+    
+    body.aquarius {
+        background-image: url('../images/background_gradients/capricorn.png');
+        background-size: cover;
+    }
+    
+    body.pisces {
+        background-image: url('../images/background_gradients/pisces.png');
+        background-size: cover;
+    }
+    
+}
 
 
 
@@ -625,7 +686,12 @@ body {
     min-height: 100%;
 }
 
-@media only screen and (min-width: 768px) { 
+@media only screen and (min-width: 768px) {
+    
+    body {   
+        background-color: transparent;
+        padding: 0px;
+    }
 
     .js-help-screen {
         width: 100%;

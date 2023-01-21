@@ -1,73 +1,80 @@
-.container {
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    border: 1px solid black;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    overflow: hidden;
-    background-color: red;
-    
-}
+@media only screen and (min-width: 768px) { 
 
-.container div {
-    position: absolute;
-    border-radius: 50%;
-    animation: gradient 4s infinite;
-}
-
-@keyframes gradient {
-    70% {
-        transform: scale(1.2) translate(50px);
+    .container {
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        border: 1px solid black;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        background-color: red;
+        
     }
+
+
+
+    .container div {
+        position: absolute;
+        border-radius: 50%;
+        animation: gradient 4s infinite;
+    }
+
+    @keyframes gradient {
+        70% {
+            transform: scale(1.2) translate(50px);
+        }
+    }
+
+    .container div:nth-child(1) {
+        height: 90%;
+        width: 80%;
+        background-color: #28313B;
+        left: -20%;
+        top: -10%;
+    }
+
+    .container div:nth-child(2) {
+        height: 80%;
+        width: 70%;
+        background-color: #2A5470;
+        top: -12%;
+        right: -12%;
+        animation-delay: 2s;
+
+    }
+
+    .container div:nth-child(3) {
+        height: 65%;
+        width: 80%;
+        background-color: #28313B;
+        bottom: -15%;
+        right: -20%;
+        animation-delay: 0.3s;
+
+    }
+
+    .container div:nth-child(4) {
+        height: 50%;
+        width: 75%;
+        background-color: #4C4177;
+        bottom: -10%;
+        left: -18%;
+        animation-delay: 1.2s;
+    }
+
+    .container:after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(90px);
+    }
+
+
+
 }
-
-.container div:nth-child(1) {
-    height: 90%;
-    width: 80%;
-    background-color: #28313B;
-    left: -20%;
-    top: -10%;
-}
-
-.container div:nth-child(2) {
-    height: 80%;
-    width: 70%;
-    background-color: #2A5470;
-    top: -12%;
-    right: -12%;
-    animation-delay: 2s;
-
-}
-
-.container div:nth-child(3) {
-    height: 65%;
-    width: 80%;
-    background-color: #28313B;
-    bottom: -15%;
-    right: -20%;
-    animation-delay: 0.3s;
-
-}
-
-.container div:nth-child(4) {
-    height: 50%;
-    width: 75%;
-    background-color: #4C4177;
-    bottom: -10%;
-    left: -18%;
-    animation-delay: 1.2s;
-}
-
-.container:after {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(90px);
-}
-
