@@ -44,13 +44,13 @@ function convert_date() { // Function used to (1) grab the date, (2) take the bi
 
         if ((birthmonth == 3 && day > 21) || (birthmonth == 4 && day <= 19)) { // If date is between March 21st and April 19th...
 
-            window.location.href = "../zodiacs/aries.html";
+            window.location.href = "zodiacs/aries.html";
 
         }
 
         if ((birthmonth == 4 && day > 20) || (birthmonth == 5 && day <= 20)) { // If date is between April 20th and May 20th...
 
-            window.location.href = "../zodiacs/taurus.html";
+            window.location.href = "zodiacs/taurus.html";
 
         }
 
