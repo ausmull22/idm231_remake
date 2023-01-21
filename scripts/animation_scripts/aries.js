@@ -3,5 +3,5 @@ var animation_aries = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/lottie/zodiac/aries.json'
+    path: '../lottie/zodiac/aries.json'
 })
