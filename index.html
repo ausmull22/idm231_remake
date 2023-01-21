@@ -113,6 +113,15 @@
 
     <div id="footer"></div>
 
-    <script src="scripts/loader.js"></script>
+    <script> 
+
+        let loader = document.getElementById("js-preloader");
+
+        window.addEventListener("load", function() {
+            loader.style.filter ="blur(10px)";
+            loader.style.opacity ="0";
+        })
+
+    </script>
 </body>
 </html>
