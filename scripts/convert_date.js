@@ -44,78 +44,78 @@ function convert_date() { // Function used to (1) grab the date, (2) take the bi
 
         if ((birthmonth == 3 && day > 21) || (birthmonth == 4 && day <= 19)) { // If date is between March 21st and April 19th...
 
-            window.location.href = "/zodiacs/aries.html";
+            window.location.href = "../zodiacs/aries.html";
 
         }
 
         if ((birthmonth == 4 && day > 20) || (birthmonth == 5 && day <= 20)) { // If date is between April 20th and May 20th...
 
-            window.location.href = "/zodiacs/taurus.html";
+            window.location.href = "../zodiacs/taurus.html";
 
         }
 
         if ((birthmonth == 5 && day > 21) || (birthmonth == 6 && day <= 21)) {// If date is between May 21st and June 21st...
 
-            window.location.href = "/zodiacs/gemini.html"; // Switch to Gemini
+            window.location.href = "../zodiacs/gemini.html"; // Switch to Gemini
 
         }
 
 
         if ((birthmonth == 6 && day > 22) || (birthmonth == 7 && day <= 22)) { // If date is between June 22nd and July 22nd...
 
-            window.location.href = "/zodiacs/cancer.html"; // Switch to Cancer               
+            window.location.href = "../zodiacs/cancer.html"; // Switch to Cancer               
 
         }
 
 
         if ((birthmonth == 7 && day > 23) || (birthmonth == 8 && day <= 22)) { // If date is between July 23rd and August 22nd...
 
-            window.location.href = "/zodiacs/leo.html"; // Switch to Leo                
+            window.location.href = "../zodiacs/leo.html"; // Switch to Leo                
 
         }
 
         if ((birthmonth == 8 && day > 23) || (birthmonth == 9 && day <= 22)) { // If date is between August 23rd and September 22nd...
 
-            window.location.href = "/zodiacs/virgo.html"; // Switch to Virgo   
+            window.location.href = "../zodiacs/virgo.html"; // Switch to Virgo   
 
         }
 
 
         if ((birthmonth == 9 && day > 23) || (birthmonth == 10 && day <= 23)) { // If date is between September 23rd and October 23rd...
 
-            window.location.href = "/zodiacs/libra.html"; // Switch to Libra     
+            window.location.href = "../zodiacs/libra.html"; // Switch to Libra     
 
         }
 
         if ((birthmonth == 10 && day > 24) || (birthmonth == 11 && day <= 22)) { // If date is between October 24th and November 22nd...
 
-            window.location.href = "/zodiacs/scorpio.html"; // Switch to Scorpio              
+            window.location.href = "../zodiacs/scorpio.html"; // Switch to Scorpio              
 
         }
 
         if ((birthmonth == 11 && day > 23) || (birthmonth == 12 && day <= 21)) { // If date is between November 23rd and December 21st...
 
-            window.location.href = "/zodiacs/saggitarus.html"; // Switch to Saggitarus    
+            window.location.href = "../zodiacs/saggitarus.html"; // Switch to Saggitarus    
 
         }
 
 
         if ((birthmonth == 12 && day > 22) || (birthmonth == 1 && day <= 19)) { // If date is between Decemebr 22nd and January 19th...
 
-            window.location.href = "/zodiacs/capricorn.html"; // Switch to Capricorn
+            window.location.href = "../zodiacs/capricorn.html"; // Switch to Capricorn
 
         }
 
         if ((birthmonth == 1 && day > 20) || (birthmonth == 2 && day <= 18)) { // If date is between January 20th and February 18th...
 
-            window.location.href = "/zodiacs/aquarius.html"; // Switch to Aquarius                
+            window.location.href = "../zodiacs/aquarius.html"; // Switch to Aquarius                
 
         }
 
 
         if ((birthmonth == 2 && day > 19) || (birthmonth == 3 && day <= 20)) { // If date is between February 19th and March 20th...
 
-            window.location.href = "/zodiacs/pisces.html"; // Switch to Pisces
+            window.location.href = "../zodiacs/pisces.html"; // Switch to Pisces
 
         }
 
