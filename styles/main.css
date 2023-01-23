@@ -735,6 +735,9 @@ body {
     }
 
     
+    main {
+        padding: 0rem;
+    }
 
     .input_screen {
         position: relative;
