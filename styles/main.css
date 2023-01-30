@@ -763,7 +763,12 @@ body {
     .splashscreen_lottie {
         margin: auto;
         width: 50%;
+        height: 100%;
 
+    }
+
+    .splashscreen_lottie iframe{
+        height: 100%;
     }
     .zodiac_button_container {
         display: flex;
