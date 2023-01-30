@@ -198,7 +198,7 @@ main {
 
  /* Input Form */
 
-input {
+ input[type=date]  {
     width: 100%;
 }
 
