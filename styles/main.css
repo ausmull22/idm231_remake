@@ -198,6 +198,10 @@ main {
 
  /* Input Form */
 
+input {
+    width: 100%;
+}
+
 .input_form {
     width: 100%;
     margin: auto;
