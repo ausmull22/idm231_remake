@@ -15,7 +15,7 @@ function convert_date() { // Function used to (1) grab the date, (2) take the bi
         setTimeout(reset_style_animation, 1000);
         
     } else { // If the input is not empty, proceed with the dispaying the date and zodiac
-    
+
 
         // 2nd Process - Take out the Birth Month and Day separately to determine the zodiac.
 

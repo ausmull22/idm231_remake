@@ -10,6 +10,29 @@
     font-weight: normal;
 }
 
+input[type=date] {
+    font-family: 'Quicksand'
+}
+
+input[type=text] {
+    font-family: 'Quicksand'
+}
+
+input[type=date] {
+    font-family: 'Quicksand'
+}
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+    color: white !important;
+}
+
+
+.splashscreen_lottie {
+    display: none;
+}
 
 body {
     margin: 0rem;
@@ -49,6 +72,13 @@ main {
 }
 
 /* Zodiac Button  */
+
+.button-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .zodiac_button_container {
     display: grid;
@@ -92,10 +122,9 @@ main {
 }
 
 .js-cereal-name {
-    white-space: nowrap;
     width: 100%;
-    
     position: relative;
+    overflow: hidden;
     margin-top: 0.25rem;
     opacity: 0;
     font-size: .65rem;
@@ -109,10 +138,8 @@ main {
 }
 
 .icon_container {
-    z-index: 5;
     width: 78px;
     height: 78px;
-    margin: .4rem 0;
     border: white solid 2px;
     border-radius: 100%;
     transition: 0.5s;
@@ -520,6 +547,18 @@ button:hover {
     height: 400px;
 }
 
+#mobile-image-replacement {
+    display: block;
+    width: 100%;
+    
+}
+
+#mobile-image-replacement img {
+    display: block;
+    width: 100%;
+    
+}
+
 /* /.............................................................................................................
 //.....GGGGGG.....RRRRRRRRR.......AAAA......DDDDDDDDD....III..EEEEEEEEEE..NNNN....NNN..TTTTTTTTTTS..SSSSSS.....
 //...GGGGGGGGGG...RRRRRRRRRRR.....AAAAA.....DDDDDDDDDD...III..EEEEEEEEEE..NNNN....NNN..TTTTTTTTTTSSSSSSSSSS....
@@ -900,6 +939,11 @@ body {
         display: block;
     }
 
+
+    .splashscreen_lottie {
+       display: block;
+
+    }
 } 
 
 
@@ -983,6 +1027,7 @@ body { /* Body Style */
 
     #mobile-image-replacement {
         display: none;
+        
     }
 
 } 
