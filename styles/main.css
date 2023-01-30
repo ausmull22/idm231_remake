@@ -14,14 +14,6 @@ input[type=date] {
     font-family: 'Quicksand'
 }
 
-input[type=text] {
-    font-family: 'Quicksand'
-}
-
-input[type=date] {
-    font-family: 'Quicksand'
-}
-
 input[type=date]:required:invalid::-webkit-datetime-edit {
     color: transparent;
 }
@@ -579,16 +571,19 @@ button:hover {
 //.....GGGGGG.....RRR.....RRRRAAA......AAAA.DDDDDDDDD....III..EEEEEEEEEEE.NNN....NNNN......TTT......SSSSSS.....
 //............................................................................................................. */
 
+body {
+    background-size: 250%;
+}
 
 body.aries {
     background-image: url('../images/background_gradients/aries.png');
-    background-size: 500%;
 }
 
 
 body.taurus {
     background-image: url('../images/background_gradients/taurus.png');
     background-size: cover;
+    
 }
 
 body.gemini {
@@ -632,7 +627,7 @@ body.capricorn {
 }
 
 body.aquarius {
-    background-image: url('../images/background_gradients/capricorn.png');
+    background-image: url('../images/background_gradients/aquarius.png');
     background-size: cover;
 }
 
@@ -644,6 +639,10 @@ body.pisces {
 
 
 @media only screen and (min-width: 768px) {
+    body {
+        background-size: 100%;
+    }
+    
     body.aries {
         background-image: url('../images/background_gradients/aries.png');
         background-size: cover;
@@ -696,7 +695,7 @@ body.pisces {
     }
     
     body.aquarius {
-        background-image: url('../images/background_gradients/capricorn.png');
+        background-image: url('../images/background_gradients/aquarius.png');
         background-size: cover;
     }
     
