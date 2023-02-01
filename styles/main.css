@@ -599,12 +599,19 @@ body {
 
 body.aries {
     background-image: url('../images/background_gradients/aries.png');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
 body.taurus {
     background-image: url('../images/background_gradients/taurus.png');
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
     
 }
 
@@ -618,50 +625,76 @@ body.gemini {
 
 body.cancer {
     background-image: url('../images/background_gradients/cancer.png');
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body.leo {
     background-image: url('../images/background_gradients/leo.png');
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
-}
+    background-repeat: no-repeat;
+}    
+
 
 body.virgo {
     background-image: url('../images/background_gradients/virgo.png');
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body.libra {
     background-image: url('../images/background_gradients/libra.png');
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body.scorpio {
     background-image: url('../images/background_gradients/scorpio.png');
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body.saggitarus {
     background-image: url('../images/background_gradients/saggitarus.png');
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body.capricorn {
     background-image: url('../images/background_gradients/capricorn.png');
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body.aquarius {
     background-image: url('../images/background_gradients/aquarius.png');
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body.pisces {
     background-image: url('../images/background_gradients/pisces.png');
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
-
-
 
 @media only screen and (min-width: 768px) {
     body {
