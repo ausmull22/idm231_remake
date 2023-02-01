@@ -233,9 +233,9 @@ main {
 .inputBox {
     display: flex;
     position: relative;
-    width: 98%;
+    width: 99%;
     height: 50px;
-    min-width: 98%;
+    min-width: 99%;
 
 }
 
@@ -464,6 +464,8 @@ button:hover {
 
 .button_array {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 
