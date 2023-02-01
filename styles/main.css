@@ -234,7 +234,7 @@ main {
 }
 
 .inputBox input {
-    width: 100%;
+    width: 98%;
     height: 100%;
     border: 1px solid rgba(255,255,255,0.25);
     background-color: #1d2b3a;
@@ -1011,6 +1011,20 @@ body {
        display: block;
 
     }
+
+    
+    .inputBox input {
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(255,255,255,0.25);
+        background-color: #1d2b3a;
+        border-radius: 5px;
+        outline: none;
+        color: #fff;
+        font-size: 1em;
+    }
+
+
 } 
 
 
