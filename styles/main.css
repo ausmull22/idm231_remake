@@ -609,7 +609,9 @@ body.taurus {
 }
 
 body.gemini {
-    background-image: url('../images/background_gradients/gemini.svg');
+    background-image: url('../images/background_gradients/gemini.png');
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
 }
