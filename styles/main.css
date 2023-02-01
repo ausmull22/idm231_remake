@@ -22,6 +22,8 @@ input[type=date]:focus::-webkit-datetime-edit {
 }
 
 form {
+    display: flex;
+    width: 100%;
     min-width: 100%;
 }
 
