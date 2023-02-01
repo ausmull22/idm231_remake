@@ -220,6 +220,8 @@ main {
 
  input[type=date]  {
     width: 100%;
+    min-width: 100%;
+    display: flex;
 }
 
 .input_form {
