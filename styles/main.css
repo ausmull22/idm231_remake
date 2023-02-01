@@ -235,6 +235,7 @@ main {
 
 .inputBox input {
     width: 98%;
+    min-width: 98%;
     height: 100%;
     border: 1px solid rgba(255,255,255,0.25);
     background-color: #1d2b3a;
