@@ -231,9 +231,11 @@ main {
 
 
 .inputBox {
+    display: flex;
     position: relative;
     width: 98%;
     height: 50px;
+    min-width: 98%;
 
 }
 
