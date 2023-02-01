@@ -21,6 +21,10 @@ input[type=date]:focus::-webkit-datetime-edit {
     color: white !important;
 }
 
+form {
+    min-width: 100%;
+}
+
 
 .particle{
     position: fixed;
@@ -53,7 +57,7 @@ body {
     padding: 0rem;
     font-family: 'Quicksand', sans-serif;
     color: white;
-    background-image: url("../images/background_gradients/startscreen.png");
+    background-image: url("../images/background_gradients/startscreen.svg");
     background-size: 150%;
 }
 
