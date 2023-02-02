@@ -1,6 +1,6 @@
 // CONVERT DATE FUNCTION
 
-function convert_date() { // Function used to (1) grab the date, (2) take the birhmonth and day, and (3) find the Zodiac.
+function convert_date() { // Function used to (1) grab the date, (2) take the birthmonth and day, and (3) find the Zodiac.
 
     // 1st Process - Grab The Date
 
