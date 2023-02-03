@@ -91,6 +91,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 /* Zodiac Button  */
@@ -388,8 +389,7 @@ input[type=checkbox].toggle:checked + label:before{ /* Toggle Circle Positioned 
     margin-bottom: 1rem;
 }
 
-.logo_container img {
-}
+
 
 .switch {
     margin-top: 2rem;
@@ -492,6 +492,7 @@ button:hover {
 
 #js-return-button {
     padding: 1rem 3rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -515,6 +516,7 @@ button:hover {
 }
 
 .js-help-screen {
+    display: flex;
     z-index: 3;
     background-color: black;
     width: 100%;
@@ -524,6 +526,7 @@ button:hover {
     transition: 1s;
 }
 
+
 .js-help-screen.active {
     opacity: 0;
     visibility: none;
@@ -531,6 +534,9 @@ button:hover {
     pointer-events: none;
 }
 
+.js-help-screen img {
+    width: 80%;
+}
 
 #js-preloader {
     background-color: black;
@@ -960,6 +966,10 @@ body {
         color: rgba(255, 255, 255, 0.616);
         border-radius: 20rem;
         transition: 0.5s;
+    }
+
+    #reeses-puffs .active {
+        width: 100px;
     }
 
     a:hover .meta-data {

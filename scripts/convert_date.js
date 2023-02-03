@@ -95,7 +95,7 @@ function convert_date() { // Function used to (1) grab the date, (2) take the bi
 
         if ((birthmonth == 11 && day > 23) || (birthmonth == 12 && day <= 21)) { // If date is between November 23rd and December 21st...
 
-            window.location.href = "zodiacs/saggitarus.html"; // Switch to Saggitarus    
+            window.location.href = "zodiacs/sagittarius.html"; // Switch to Saggitarus    
 
         }
 
