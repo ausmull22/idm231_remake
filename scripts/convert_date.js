@@ -124,6 +124,14 @@ function convert_date() { // Function used to (1) grab the date, (2) take the bi
 
 }
 
+
+document.addEventListener("keyup", function(event) {
+    if (event.key === 'Enter') {
+        convert_date();
+    }
+});
+
+
 function reset_style_animation() {
 
     document.getElementById('js-discover-button').style.animation="none";
